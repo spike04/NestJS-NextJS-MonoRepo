@@ -1,6 +1,12 @@
-import Image from "next/image";
-import { Button } from "@repo/ui/button";
-import styles from "./page.module.css";
+import Image from 'next/image'
+import { Button } from '@repo/ui/button'
+import styles from './page.module.css'
+import { z } from 'zod'
+
+const zodSchema = z.object({
+  name: z.string(),
+  age: z.number(),
+})
 
 export default function Home() {
   return (
@@ -95,5 +101,5 @@ export default function Home() {
         </a>
       </footer>
     </div>
-  );
+  )
 }
